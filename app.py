@@ -34,35 +34,7 @@ def cargar_catalogo():
 
 CATALOGO = cargar_catalogo()
 
-# Embeddings de referencia para fallback de aguacate (deep features)
-REF_EMBEDDING = None
-NEG_EMBEDDINGS = []
-
-def preparar_embeddings():
-    global REF_EMBEDDING, NEG_EMBEDDINGS
-    ref_path = os.path.join(BASE, 'static', 'referencias', 'aguacate.jpg')
-    if os.path.exists(ref_path):
-        try:
-            REF_EMBEDDING = model.embed(ref_path)[0]
-        except Exception:
-            REF_EMBEDDING = None
-    neg_dir = os.path.join(BASE, 'dataset', 'images')
-    negs = []
-    if os.path.isdir(neg_dir):
-        for root, _, files in os.walk(neg_dir):
-            for fn in files:
-                if fn.lower().endswith(('.jpg', '.jpeg', '.png')):
-                    try:
-                        negs.append(model.embed(os.path.join(root, fn))[0])
-                    except Exception:
-                        pass
-                    if len(negs) >= 20:
-                        break
-            if len(negs) >= 20:
-                break
-    NEG_EMBEDDINGS = negs
-
-preparar_embeddings()
+# (Embeddings deshabilitados para reducir memoria en Render)
 
 
 def construir_texto_voz(info, confianza):
@@ -106,11 +78,15 @@ def predict():
     try:
         img = Image.open(file.stream)
         img = ImageOps.exif_transpose(img).convert('RGB')
-        img.save(file_path, 'JPEG', quality=92)
+        # Redimensionar para reducir memoria en Render
+        img.thumbnail((640, 640))
+        img.save(file_path, 'JPEG', quality=85)
     except Exception as e:
         return jsonify({'error': f'No se pudo leer la imagen: {e}'}), 400
 
-    results = model(file_path)
+    import torch
+    with torch.inference_mode():
+        results = model(file_path)
 
     detecciones = []  # lista de todas las detecciones/clasificaciones
     if any(r.probs is not None for r in results):  # modelo de CLASIFICACIÓN (yolov8-cls)
@@ -151,25 +127,7 @@ def predict():
         info = None
         producto_principal = 'No se pudo identificar con seguridad'
 
-        # Fallback por similitud de embeddings (deep features) para aguacate
-        ref_path = os.path.join(BASE, 'static', 'referencias', 'aguacate.jpg')
-        if os.path.exists(ref_path) and REF_EMBEDDING is not None:
-            try:
-                import torch, torch.nn.functional as F
-                emb = model.embed(file_path)[0]
-                sim_ref = F.cosine_similarity(emb.unsqueeze(0), REF_EMBEDDING.unsqueeze(0)).item()
-                sim_neg = 0.0
-                if NEG_EMBEDDINGS:
-                    sims = [F.cosine_similarity(emb.unsqueeze(0), n.unsqueeze(0)).item() for n in NEG_EMBEDDINGS]
-                    sim_neg = max(sims) if sims else 0.0
-                # Si es más parecido al aguacate de referencia que a los negativos, clasificar como aguacate
-                if sim_ref > 0.85 and sim_ref > sim_neg + 0.05:
-                    clase = 'Avocado'
-                    info = CATALOGO['productos'].get('Avocado')
-                    confianza = float(sim_ref)
-                    producto_principal = (info['nombre'] if info else 'AGUACATE').upper()
-            except Exception:
-                pass
+        # (Fallback de embeddings deshabilitado para reducir memoria en Render)
     else:
         producto_principal = (info['nombre'] if info else 'Ninguno detectado').upper()
 
