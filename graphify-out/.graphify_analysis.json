@@ -1,0 +1,187 @@
+{
+  "communities": {
+    "0": [
+      "argparse",
+      "preparar_grocery",
+      "preparar_grocery_copiar_split",
+      "preparar_grocery_main",
+      "preparar_grocery_rationale_1",
+      "preparar_grocery_traducir",
+      "re"
+    ],
+    "1": [
+      "entrenar",
+      "entrenar_cargar_catalogo",
+      "entrenar_main",
+      "entrenar_rationale_1",
+      "entrenar_validar_dataset",
+      "shutil",
+      "sys"
+    ],
+    "2": [
+      "app",
+      "app_cargar_catalogo",
+      "flask",
+      "json",
+      "os",
+      "pil"
+    ],
+    "3": [
+      "csv",
+      "preparar_grocery_leer_clases",
+      "preparar_grocery_leer_clases_col",
+      "preparar_grocery_rationale_19"
+    ],
+    "4": [
+      "entrenar_cls",
+      "entrenar_cls_rationale_1",
+      "pathlib",
+      "ultralytics"
+    ],
+    "5": [
+      "app_construir_texto_voz",
+      "app_rationale_33",
+      "random"
+    ],
+    "6": [
+      "app_index",
+      "app_predict",
+      "route"
+    ]
+  },
+  "cohesion": {
+    "0": 0.47619047619047616,
+    "1": 0.47619047619047616,
+    "2": 0.4,
+    "3": 0.5,
+    "4": 0.5,
+    "5": 0.6666666666666666,
+    "6": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "preparar_grocery_main",
+      "label": "main()",
+      "degree": 6
+    },
+    {
+      "id": "entrenar_main",
+      "label": "main()",
+      "degree": 6
+    },
+    {
+      "id": "preparar_grocery_leer_clases",
+      "label": "leer_clases()",
+      "degree": 5
+    },
+    {
+      "id": "preparar_grocery_copiar_split",
+      "label": "copiar_split()",
+      "degree": 4
+    },
+    {
+      "id": "app_construir_texto_voz",
+      "label": "construir_texto_voz()",
+      "degree": 4
+    },
+    {
+      "id": "entrenar_cargar_catalogo",
+      "label": "cargar_catalogo()",
+      "degree": 3
+    },
+    {
+      "id": "app_predict",
+      "label": "predict()",
+      "degree": 3
+    },
+    {
+      "id": "preparar_grocery_traducir",
+      "label": "traducir()",
+      "degree": 2
+    },
+    {
+      "id": "entrenar_validar_dataset",
+      "label": "validar_dataset()",
+      "degree": 2
+    },
+    {
+      "id": "app_cargar_catalogo",
+      "label": "cargar_catalogo()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "copiar_split()",
+      "target": "shutil",
+      "source_files": [
+        "preparar_grocery.py",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 0 → community 1"
+    },
+    {
+      "source": "main()",
+      "target": "json",
+      "source_files": [
+        "preparar_grocery.py",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 0 → community 2"
+    },
+    {
+      "source": "main()",
+      "target": "leer_clases()",
+      "source_files": [
+        "preparar_grocery.py",
+        "preparar_grocery.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 0 → community 3"
+    },
+    {
+      "source": "cargar_catalogo()",
+      "target": "json",
+      "source_files": [
+        "entrenar.py",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 1 → community 2"
+    },
+    {
+      "source": "predict()",
+      "target": "construir_texto_voz()",
+      "source_files": [
+        "app.py",
+        "app.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 5 → community 6"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `leer_clases()` connect `leer_clases` to `preparar_grocery.py`?",
+      "why": "High betweenness centrality (0.120) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `main()` connect `preparar_grocery.py` to `app.py`, `leer_clases`?",
+      "why": "High betweenness centrality (0.098) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `construir_texto_voz()` connect `construir_texto_voz` to `app.py`, `predict`?",
+      "why": "High betweenness centrality (0.062) - this node is a cross-community bridge."
+    }
+  ]
+}

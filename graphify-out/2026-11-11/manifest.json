@@ -1,0 +1,33 @@
+{
+  "app.py": {
+    "mtime": 1794387955.6527436,
+    "seen": 1794410413.481596,
+    "ast_hash": "b6cb2436be62e7e193eaa5725d8a0b59",
+    "semantic_hash": "b6cb2436be62e7e193eaa5725d8a0b59"
+  },
+  "catalogo.json": {
+    "mtime": 1794386210.3671885,
+    "seen": 1794410413.4817665,
+    "ast_hash": "2a8f3c5d6e4ca37b210eab3c7b34056f",
+    "semantic_hash": "2a8f3c5d6e4ca37b210eab3c7b34056f",
+    "ast_empty": true
+  },
+  "entrenar.py": {
+    "mtime": 1794383205.0271504,
+    "seen": 1794410413.4817698,
+    "ast_hash": "905ee971a0a509500c242dbe10d7b2a1",
+    "semantic_hash": "905ee971a0a509500c242dbe10d7b2a1"
+  },
+  "entrenar_cls.py": {
+    "mtime": 1794383205.0337613,
+    "seen": 1794410413.481862,
+    "ast_hash": "26fa25afb032d8b938696f86bfb4d465",
+    "semantic_hash": "26fa25afb032d8b938696f86bfb4d465"
+  },
+  "preparar_grocery.py": {
+    "mtime": 1794383204.9399712,
+    "seen": 1794410413.4819443,
+    "ast_hash": "1dafe54648c40f510047aac5f044f1e7",
+    "semantic_hash": "1dafe54648c40f510047aac5f044f1e7"
+  }
+}

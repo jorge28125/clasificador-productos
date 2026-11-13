@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .main-card {
+            background: rgba(255,255,255,0.97);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            max-width: 520px;
+            width: 100%;
+        }
+        .camera-container {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #1a1a2e;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        video, canvas { width: 100%; height: auto; display: block; border-radius: 16px; }
+        .btn-custom {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none; color: white; font-weight: 600;
+            padding: 14px 24px; border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255,65,108,0.4);
+        }
+        .btn-custom:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,65,108,0.6); color: white; }
+        .btn-custom:disabled { opacity: 0.6; transform: none; }
+        .result-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 6px solid #4caf50;
+            border-radius: 16px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn { from { opacity:0; transform: translateY(15px);} to { opacity:1; transform: translateY(0);} }
+        .drop-zone {
+            border: 3px dashed #667eea; border-radius: 16px;
+            padding: 30px; text-align: center; cursor: pointer;
+            transition: all 0.3s ease; background: #f8f9ff;
+        }
+        .drop-zone:hover, .drop-zone.dragover { background: #eef0ff; border-color: #764ba2; }
+        .confidence-bar { height: 8px; border-radius: 4px; background: #e0e0e0; overflow: hidden; }
+        .confidence-fill { height: 100%; background: linear-gradient(90deg, #4caf50, #8bc34a); transition: width 0.5s ease; }
+        .history-item { font-size: 0.85rem; padding: 6px 10px; border-radius: 8px; background: #f5f5f5; margin-bottom: 4px; }
+        .spinner-border-sm { width: 1rem; height: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="main-card p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-dark mb-1">🛒 Clasificador de Productos</h2>
+                        <p class="text-muted small mb-0">Reconocimiento inteligente para la canasta familiar</p>
+                    </div>
+
+                    <!-- Cámara -->
+                    <div class="camera-container mb-3" id="camera-box">
+                        <video id="video" autoplay playsinline></video>
+                        <canvas id="canvas" style="display:none;"></canvas>
+                    </div>
+
+                    <!-- Preview -->
+                    <img id="preview" class="img-fluid rounded-4 mb-3 d-none shadow" alt="Foto" style="max-height:320px; width:100%; object-fit:cover;">
+
+                    <!-- Botones -->
+                    <div class="d-grid gap-2 mb-3">
+                        <button id="capture-btn" class="btn btn-custom btn-lg">
+                            <i class="bi bi-camera-fill me-2"></i>Tomar Foto y Clasificar
+                        </button>
+                        <button id="upload-btn" class="btn btn-outline-secondary btn-lg rounded-pill">
+                            <i class="bi bi-image me-2"></i>Subir foto o usar cámara del celular
+                        </button>
+                        <input type="file" id="file-input" accept="image/*" class="d-none">
+                    </div>
+
+                    <!-- Drop zone -->
+                    <div class="drop-zone mb-3" id="drop-zone">
+                        <i class="bi bi-cloud-arrow-up fs-1 text-primary"></i>
+                        <p class="mb-0 mt-2 text-muted">Arrastra una imagen aquí</p>
+                    </div>
+
+                    <!-- Loading -->
+                    <div id="loading" class="text-center d-none mb-3">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        <p class="mt-2 text-muted small">Analizando imagen...</p>
+                    </div>
+
+                    <!-- Resultado -->
+                    <div id="resultado-container" class="result-box p-3 d-none text-start mt-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <span class="text-success fw-bold text-uppercase" style="font-size:0.75rem;">Producto Identificado</span>
+                                <h3 id="producto-texto" class="fw-bold text-dark m-0">--</h3>
+                            </div>
+                            <div class="text-end">
+                                <span class="text-muted" style="font-size:0.75rem;">Confianza</span>
+                                <h5 id="confianza-texto" class="fw-semibold text-success m-0">0%</h5>
+                            </div>
+                        </div>
+                        <div class="confidence-bar mb-2">
+                            <div class="confidence-fill" id="confidence-fill" style="width:0%"></div>
+                        </div>
+                        <p id="categoria-texto" class="badge bg-success-subtle text-success-emphasis mt-1 mb-1"></p>
+                        <p id="descripcion-texto" class="mb-2 text-secondary" style="font-size:0.9rem;"></p>
+                        <p id="total-detecciones" class="small text-muted mb-1"></p>
+                        <ul id="detecciones-lista" class="list-group list-group-flush mb-2"></ul>
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <button id="repetir-btn" class="btn btn-sm btn-outline-success rounded-pill">
+                                <i class="bi bi-volume-up me-1"></i>Escuchar
+                            </button>
+                            <div class="form-check form-switch m-0">
+                                <input class="form-check-input" type="checkbox" id="auto-voz" checked>
+                                <label class="form-check-label small" for="auto-voz">Voz automática</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Historial -->
+                    <div class="mt-3" id="historial-container" style="display:none;">
+                        <h6 class="text-muted small mb-2"><i class="bi bi-clock-history me-1"></i>Historial reciente</h6>
+                        <div id="historial"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const captureBtn = document.getElementById('capture-btn');
+        const uploadBtn = document.getElementById('upload-btn');
+        const fileInput = document.getElementById('file-input');
+        const preview = document.getElementById('preview');
+        const resultadoContainer = document.getElementById('resultado-container');
+        const productoTexto = document.getElementById('producto-texto');
+        const confianzaTexto = document.getElementById('confianza-texto');
+        const categoriaTexto = document.getElementById('categoria-texto');
+        const descripcionTexto = document.getElementById('descripcion-texto');
+        const repetirBtn = document.getElementById('repetir-btn');
+        const autoVoz = document.getElementById('auto-voz');
+        const dropZone = document.getElementById('drop-zone');
+        const loading = document.getElementById('loading');
+        const confidenceFill = document.getElementById('confidence-fill');
+        const historialContainer = document.getElementById('historial-container');
+        const historial = document.getElementById('historial');
+        let ultimoTexto = null, ultimaVoz = null;
+        let historialItems = [];
+
+        function hablar(texto, cfg) {
+            if (!('speechSynthesis' in window) || !texto) return;
+            speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(texto);
+            u.lang = cfg.idioma; u.rate = cfg.velocidad; u.pitch = cfg.tono; u.volume = cfg.volumen;
+            const voces = speechSynthesis.getVoices();
+            const base = cfg.idioma.split('-')[0];
+            u.voice = voces.find(v => v.lang === cfg.idioma) || voces.find(v => v.lang.startsWith(base)) || null;
+            speechSynthesis.speak(u);
+        }
+        repetirBtn.addEventListener('click', () => hablar(ultimoTexto, ultimaVoz));
+
+        const camaraDisponible = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+        if (camaraDisponible) {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+                .then(stream => { video.srcObject = stream; })
+                .catch(err => { document.getElementById('camera-box').classList.add('d-none'); console.warn(err); });
+        } else {
+            document.getElementById('camera-box').classList.add('d-none');
+            captureBtn.classList.add('d-none');
+        }
+
+        function agregarHistorial(producto, confianza) {
+            historialItems.unshift({producto, confianza, time: new Date().toLocaleTimeString()});
+            if (historialItems.length > 5) historialItems.pop();
+            historial.innerHTML = historialItems.map(h =>
+                `<div class="history-item d-flex justify-content-between">
+                    <span>${h.producto}</span>
+                    <span class="text-muted">${h.confianza} · ${h.time}</span>
+                </div>`
+            ).join('');
+            historialContainer.style.display = 'block';
+        }
+
+        function clasificar(blob, nombre) {
+            const formData = new FormData();
+            formData.append('image', blob, nombre);
+            captureBtn.disabled = true; uploadBtn.disabled = true;
+            loading.classList.remove('d-none');
+            resultadoContainer.classList.add('d-none');
+
+            fetch('/predict', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.error) throw new Error(data.error);
+                productoTexto.textContent = data.producto;
+                confianzaTexto.textContent = data.confianza;
+                categoriaTexto.textContent = data.categoria;
+                categoriaTexto.style.display = data.categoria ? '' : 'none';
+                descripcionTexto.textContent = data.descripcion;
+                // confidence bar
+                const pct = parseFloat(data.confianza);
+                confidenceFill.style.width = pct + '%';
+                // detections list
+                const lista = document.getElementById('detecciones-lista');
+                const total = document.getElementById('total-detecciones');
+                lista.innerHTML = '';
+                const dets = data.detecciones || [];
+                total.textContent = dets.length > 1 ? `${dets.length} detecciones en total` : '';
+                dets.forEach((d, i) => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center py-1 px-2';
+                    li.innerHTML = `<span>${i === 0 ? '⭐ ' : ''}${d.producto}</span><span class="badge bg-secondary rounded-pill">${d.confianza}</span>`;
+                    lista.appendChild(li);
+                });
+                ultimoTexto = data.texto_voz; ultimaVoz = data.voz;
+                if (autoVoz.checked && ultimoTexto) hablar(ultimoTexto, ultimaVoz);
+                resultadoContainer.classList.remove('d-none');
+                agregarHistorial(data.producto, data.confianza);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("No se pudo procesar la imagen: " + error.message);
+            })
+            .finally(() => {
+                loading.classList.add('d-none');
+                captureBtn.disabled = false; uploadBtn.disabled = false;
+            });
+        }
+
+        captureBtn.addEventListener('click', () => {
+            if (!video.videoWidth) { alert("La cámara no está entregando imagen."); return; }
+            preview.classList.add('d-none');
+            document.getElementById('camera-box').classList.remove('d-none');
+            const ctx = canvas.getContext('2d');
+            canvas.width = video.videoWidth; canvas.height = video.videoHeight;
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(blob => clasificar(blob, 'captura.jpg'), 'image/jpeg', 0.9);
+        });
+
+        uploadBtn.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+            preview.src = URL.createObjectURL(file);
+            preview.classList.remove('d-none');
+            document.getElementById('camera-box').classList.add('d-none');
+            createImageBitmap(file).then(bmp => {
+                canvas.width = bmp.width; canvas.height = bmp.height;
+                canvas.getContext('2d').drawImage(bmp, 0, 0);
+                canvas.toBlob(blob => clasificar(blob, 'subida.jpg'), 'image/jpeg', 0.92);
+            }).catch(() => clasificar(file, file.name));
+            fileInput.value = '';
+        });
+
+        // Drag and drop
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault(); dropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                preview.src = URL.createObjectURL(file);
+                preview.classList.remove('d-none');
+                document.getElementById('camera-box').classList.add('d-none');
+                clasificar(file, file.name);
+            }
+        });
+        dropZone.addEventListener('click', () => fileInput.click());
+    </script>
+</body>
+</html>

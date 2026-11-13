@@ -1,0 +1,1280 @@
+{
+  "app.py": {
+    "mtime": 1794448950.582844,
+    "seen": 1794448996.4436915,
+    "ast_hash": "feaad254cc2019ca08782708772d02ab",
+    "semantic_hash": ""
+  },
+  "catalogo.json": {
+    "mtime": 1794386210.3671885,
+    "seen": 1794447129.4069178,
+    "ast_hash": "2a8f3c5d6e4ca37b210eab3c7b34056f",
+    "semantic_hash": ""
+  },
+  "entrenar.py": {
+    "mtime": 1794444586.0280652,
+    "seen": 1794445587.1045027,
+    "ast_hash": "ea57819b6f81fe06e0b22d836e544ba8",
+    "semantic_hash": ""
+  },
+  "entrenar_cls.py": {
+    "mtime": 1794383205.0337613,
+    "seen": 1794410413.481862,
+    "ast_hash": "26fa25afb032d8b938696f86bfb4d465",
+    "semantic_hash": "26fa25afb032d8b938696f86bfb4d465"
+  },
+  "preparar_grocery.py": {
+    "mtime": 1794383204.9399712,
+    "seen": 1794410413.4819443,
+    "ast_hash": "1dafe54648c40f510047aac5f044f1e7",
+    "semantic_hash": "1dafe54648c40f510047aac5f044f1e7"
+  },
+  "catalogo_grocery_backup.json": {
+    "mtime": 1794386210.3671885,
+    "seen": 1794445587.104403,
+    "ast_hash": "2a8f3c5d6e4ca37b210eab3c7b34056f",
+    "semantic_hash": ""
+  },
+  "dataset/data.yaml": {
+    "mtime": 1794444591.1311836,
+    "seen": 1794445587.1044114,
+    "ast_hash": "cb9e264f95ec11837ab5940cc2ed8721",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/001.jpg.json": {
+    "mtime": 1794411819.569757,
+    "seen": 1794445587.1044142,
+    "ast_hash": "72142b6bfa5de36396413b85fc5583f4",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/002.jpg.json": {
+    "mtime": 1794411819.5704591,
+    "seen": 1794445587.1044164,
+    "ast_hash": "b8d9af4948d4133600836a3178feae08",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/003.jpg.json": {
+    "mtime": 1794411819.5724454,
+    "seen": 1794445587.104418,
+    "ast_hash": "51a7e05027b8e3bab490f66ced3cb647",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/004.jpg.json": {
+    "mtime": 1794411819.573791,
+    "seen": 1794445587.104421,
+    "ast_hash": "bd21074f83bfc5377f41e824386618c3",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/005.jpg.json": {
+    "mtime": 1794411819.573791,
+    "seen": 1794445587.1044226,
+    "ast_hash": "466779c3a65f79a31d6f2e22b24db54d",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/006.jpg.json": {
+    "mtime": 1794411819.5758011,
+    "seen": 1794445587.1044247,
+    "ast_hash": "225f5d902e0293f00292c9cd36db2a1e",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/007.jpg.json": {
+    "mtime": 1794411819.5758011,
+    "seen": 1794445587.1044264,
+    "ast_hash": "ebd02bf761a9997f7371a0871935d93b",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/008.jpg.json": {
+    "mtime": 1794411819.5778575,
+    "seen": 1794445587.1044283,
+    "ast_hash": "91699c3494aa695d68ea2d0bd0b1fffb",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/009.jpg.json": {
+    "mtime": 1794411819.5800178,
+    "seen": 1794445587.104432,
+    "ast_hash": "eea8424028aa2e8ef9196fa4145d3a7f",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/010.jpg.json": {
+    "mtime": 1794411819.5800178,
+    "seen": 1794445587.1044343,
+    "ast_hash": "97836fb95fb7f23dcbcb26f67464c1aa",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/011.jpg.json": {
+    "mtime": 1794411819.5800178,
+    "seen": 1794445587.104436,
+    "ast_hash": "e15cde00afadacb4dfc1bc2c72f09b42",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/012.jpg.json": {
+    "mtime": 1794411819.5800178,
+    "seen": 1794445587.104438,
+    "ast_hash": "7c43707a9dc092dd322930af135a9a1c",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/013.jpg.json": {
+    "mtime": 1794411819.5837262,
+    "seen": 1794445587.1044397,
+    "ast_hash": "9e10d956dd80f6b192d7ba3a389af3b2",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/014.jpg.json": {
+    "mtime": 1794411819.584603,
+    "seen": 1794445587.1044414,
+    "ast_hash": "19ce662a54cdc72073ff263383941b55",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/015.jpg.json": {
+    "mtime": 1794411819.58611,
+    "seen": 1794445587.1044445,
+    "ast_hash": "11c657a59e11d5eb6a713e2e73ab4509",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/016.jpg.json": {
+    "mtime": 1794411819.58611,
+    "seen": 1794445587.104446,
+    "ast_hash": "d45923b686993af3435f7d01fccf28e4",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/017.jpg.json": {
+    "mtime": 1794411819.58611,
+    "seen": 1794445587.104448,
+    "ast_hash": "a0e6ca0695d8e37bdd8727deb3438ab7",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/018.jpg.json": {
+    "mtime": 1794411819.58611,
+    "seen": 1794445587.1044497,
+    "ast_hash": "c83da793c86536241faf878c641ef65a",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/019.jpg.json": {
+    "mtime": 1794411819.58611,
+    "seen": 1794445587.1044514,
+    "ast_hash": "76831333843b8691195d2dd229836adc",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/020.jpg.json": {
+    "mtime": 1794411819.5912924,
+    "seen": 1794445587.104453,
+    "ast_hash": "49968528dbdf8021526c379e04ccf223",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/021.jpg.json": {
+    "mtime": 1794411819.5912924,
+    "seen": 1794445587.1044548,
+    "ast_hash": "03c67c39593b05bffb34ac6c7b7dcd67",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/022.jpg.json": {
+    "mtime": 1794411819.5932984,
+    "seen": 1794445587.1044564,
+    "ast_hash": "b718411b05e4f368d8e3bd9ea77f1096",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/023.jpg.json": {
+    "mtime": 1794411819.5932984,
+    "seen": 1794445587.1044586,
+    "ast_hash": "930f9981ec5d49c5d4bd1963c3e2c0dc",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/024.jpg.json": {
+    "mtime": 1794411819.5932984,
+    "seen": 1794445587.1044602,
+    "ast_hash": "53b494d27dd5dcdf4b3054ab54c42a4e",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/025.jpg.json": {
+    "mtime": 1794411819.5932984,
+    "seen": 1794445587.104462,
+    "ast_hash": "849245d44951694ad56a6ec69632492c",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/026.jpg.json": {
+    "mtime": 1794411819.5932984,
+    "seen": 1794445587.1044638,
+    "ast_hash": "9c29ff8b9ad31ab3eda8c202b89a4130",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/027.jpg.json": {
+    "mtime": 1794411819.5975885,
+    "seen": 1794445587.1044657,
+    "ast_hash": "b95e8d1861a0f33ee35fce6fa0f34800",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/028.jpg.json": {
+    "mtime": 1794411819.5983336,
+    "seen": 1794445587.1044672,
+    "ast_hash": "8e37ba41f3cfa86caa4d5943b6b76a42",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/029.jpg.json": {
+    "mtime": 1794411819.5983336,
+    "seen": 1794445587.1044693,
+    "ast_hash": "ed6e26d69daf68ece3e4067240f69216",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/030.jpg.json": {
+    "mtime": 1794411819.5983336,
+    "seen": 1794445587.1044707,
+    "ast_hash": "8691de9d48ec5b6b66fa01e2235dcc40",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/031.jpg.json": {
+    "mtime": 1794411819.5983336,
+    "seen": 1794445587.1044726,
+    "ast_hash": "ea0faacb7b183d56a58a0ae24ee3be79",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/032.jpg.json": {
+    "mtime": 1794411819.6016247,
+    "seen": 1794445587.1044743,
+    "ast_hash": "0d4f8e7d45985c9965af198ff0849d44",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/033.jpg.json": {
+    "mtime": 1794411819.6016247,
+    "seen": 1794445587.104476,
+    "ast_hash": "ba1576f5778d27c831dffc2e7a58ddd0",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/034.jpg.json": {
+    "mtime": 1794411819.6016247,
+    "seen": 1794445587.104478,
+    "ast_hash": "dfa4cc6f93ed190c5499bd3510f8083e",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/035.jpg.json": {
+    "mtime": 1794411819.6052792,
+    "seen": 1794445587.1044796,
+    "ast_hash": "0cf160f90ab5e01bb13d56a633671814",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/036.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.104483,
+    "ast_hash": "45eff3c989c3b2c86686392cdb5d6c41",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/037.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.1044846,
+    "ast_hash": "00a951407ffd54a5be34bf1d49e2eb49",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/038.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.1044867,
+    "ast_hash": "fcd76635805bd31382eaf6ec345842d3",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/039.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.1044884,
+    "ast_hash": "86213648e16c46b8b0fd3fcbbbc1ed1e",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/040.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.10449,
+    "ast_hash": "fc52659f03371f84354ff0359abf35a1",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/041.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.1044917,
+    "ast_hash": "35209381dd558c1c8f2abec8707a43cb",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/042.jpg.json": {
+    "mtime": 1794411819.6062849,
+    "seen": 1794445587.1044936,
+    "ast_hash": "2fb88a8e0f358dad870312f2f21ede0a",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/043.jpg.json": {
+    "mtime": 1794411819.6115005,
+    "seen": 1794445587.1044953,
+    "ast_hash": "506ab3e92334510e586d696883de4deb",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/044.jpg.json": {
+    "mtime": 1794411819.612251,
+    "seen": 1794445587.104497,
+    "ast_hash": "2ac225511162316279433b6159736f09",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/annotations/045.jpg.json": {
+    "mtime": 1794411819.612251,
+    "seen": 1794445587.1044986,
+    "ast_hash": "cbf28da0ec2ebeb0a248495cc7715654",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/meta.json": {
+    "mtime": 1794411820.3827326,
+    "seen": 1794445587.1045003,
+    "ast_hash": "64a77e78727c0ab81f69ad9bf01f48ed",
+    "semantic_hash": ""
+  },
+  "runs/productos/args.yaml": {
+    "mtime": 1794444605.8169415,
+    "seen": 1794445587.1045156,
+    "ast_hash": "b99011d8ddc84cd4b0bb7eab11ddaf0a",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1794410390.2087834,
+    "seen": 1794445587.1045175,
+    "ast_hash": "f36539ecc9af68f33ebd72770ce4a19e",
+    "semantic_hash": ""
+  },
+  "LEEME.md": {
+    "mtime": 1794383204.9625194,
+    "seen": 1794445587.1045194,
+    "ast_hash": "72febd7fe7ed8efaa107c88509fd3c18",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/001.txt": {
+    "mtime": 1794411833.7430978,
+    "seen": 1794445587.1045213,
+    "ast_hash": "434a726c3a325d8daf14221df0ab8d1e",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/003.txt": {
+    "mtime": 1794411833.8955812,
+    "seen": 1794445587.104523,
+    "ast_hash": "9806cbaf24ddb943be66a6829e819c90",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/004.txt": {
+    "mtime": 1794411833.4020095,
+    "seen": 1794445587.1045246,
+    "ast_hash": "49e3e91e4f671824dbf68fe0b9d0f2af",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/005.txt": {
+    "mtime": 1794411833.445016,
+    "seen": 1794445587.104526,
+    "ast_hash": "28b2c78538521d09b0b7704ed58c0259",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/006.txt": {
+    "mtime": 1794411833.927008,
+    "seen": 1794445587.104528,
+    "ast_hash": "dde42a6da155b88d4004454b2a0d1cca",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/010.txt": {
+    "mtime": 1794411833.3047078,
+    "seen": 1794445587.1045296,
+    "ast_hash": "b601b05df3ba77a8211ee8c2a527c7fd",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/011.txt": {
+    "mtime": 1794411833.2767897,
+    "seen": 1794445587.1045313,
+    "ast_hash": "6bd19ac8c2ca1eb41d45f9e6b0d1c4b4",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/012.txt": {
+    "mtime": 1794411833.5280855,
+    "seen": 1794445587.1045327,
+    "ast_hash": "008ee2b2170121f7212aa2e40290cafc",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/013.txt": {
+    "mtime": 1794411833.3604932,
+    "seen": 1794445587.1045349,
+    "ast_hash": "d5d96dd70feca2a08453aad5cff7e5b2",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/014.txt": {
+    "mtime": 1794411833.6180155,
+    "seen": 1794445587.1045363,
+    "ast_hash": "bcc80fb3982ceea96f4c2b14d739f343",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/017.txt": {
+    "mtime": 1794411833.7791715,
+    "seen": 1794445587.1045382,
+    "ast_hash": "f7ceac4cd5f979a4aabdb3cf8be5e32e",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/019.txt": {
+    "mtime": 1794411833.229011,
+    "seen": 1794445587.1045396,
+    "ast_hash": "19e58166adfb0c4375fd3238a10c0b5d",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/020.txt": {
+    "mtime": 1794411833.7566383,
+    "seen": 1794445587.1045415,
+    "ast_hash": "a88fda98cf7895dad220aeab8aef365c",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/021.txt": {
+    "mtime": 1794411833.6453743,
+    "seen": 1794445587.104543,
+    "ast_hash": "9f67a1a4b76b6ab2a2a93c80898b862a",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/022.txt": {
+    "mtime": 1794411833.2497501,
+    "seen": 1794445587.104545,
+    "ast_hash": "064f9ec7373b0c09e2f5e4bb3e033ff3",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/023.txt": {
+    "mtime": 1794411833.6870148,
+    "seen": 1794445587.1045468,
+    "ast_hash": "852b920f84cb458eb4e098949d50fbbd",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/024.txt": {
+    "mtime": 1794411833.291299,
+    "seen": 1794445587.1045487,
+    "ast_hash": "25a02c31f92855feffe71f10eb57dbb5",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/025.txt": {
+    "mtime": 1794411833.5057695,
+    "seen": 1794445587.1045504,
+    "ast_hash": "51504542c3ac78dc8d3797f1200bb1ad",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/026.txt": {
+    "mtime": 1794411833.6324425,
+    "seen": 1794445587.104552,
+    "ast_hash": "18f2ce0b45894d0bfdfcc4b147231aea",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/027.txt": {
+    "mtime": 1794411833.5549068,
+    "seen": 1794445587.1045537,
+    "ast_hash": "fdb373fbe368690a42b472feeed52234",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/028.txt": {
+    "mtime": 1794411833.9129603,
+    "seen": 1794445587.1045556,
+    "ast_hash": "78fee0ac591074f8a4947cdcc34a0b91",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/029.txt": {
+    "mtime": 1794411833.3329897,
+    "seen": 1794445587.1045573,
+    "ast_hash": "1b5b2d6f4a623bd4818189bce12f0c69",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/030.txt": {
+    "mtime": 1794411833.5995417,
+    "seen": 1794445587.104559,
+    "ast_hash": "a4b29334f636d5e1b04ffd1d2ebeec8a",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/031.txt": {
+    "mtime": 1794411833.7076654,
+    "seen": 1794445587.1045606,
+    "ast_hash": "f20ca2966fb1622e814781d3f18fddb8",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/032.txt": {
+    "mtime": 1794411833.541195,
+    "seen": 1794445587.1045625,
+    "ast_hash": "317178c6c24c212c926f1df3050ce704",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/033.txt": {
+    "mtime": 1794411833.3465154,
+    "seen": 1794445587.1045642,
+    "ast_hash": "28b2e04223e5b0f83c4eb8056953ebf5",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/034.txt": {
+    "mtime": 1794411833.4231284,
+    "seen": 1794445587.104566,
+    "ast_hash": "a045c1ee14e7dfa20c10631d0e486c1b",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/036.txt": {
+    "mtime": 1794411833.860369,
+    "seen": 1794445587.1045687,
+    "ast_hash": "18eeb8d2aecaa7e35162f3d96343e817",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/037.txt": {
+    "mtime": 1794411833.2639568,
+    "seen": 1794445587.1045709,
+    "ast_hash": "532a95930f5f44db9ba5444cb77120ac",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/038.txt": {
+    "mtime": 1794411833.8471682,
+    "seen": 1794445587.1045728,
+    "ast_hash": "cc74075093f58c27803f67feda61fc93",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/039.txt": {
+    "mtime": 1794411833.5686727,
+    "seen": 1794445587.1045742,
+    "ast_hash": "1688d3fedb959e6c65fdbedf49e972c2",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/040.txt": {
+    "mtime": 1794411833.584859,
+    "seen": 1794445587.104576,
+    "ast_hash": "0cc3301f3156f00170f44e0132fdd97f",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/042.txt": {
+    "mtime": 1794411833.723257,
+    "seen": 1794445587.1045778,
+    "ast_hash": "d11d7670c6b4b63993f92edffe0d3e39",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/043.txt": {
+    "mtime": 1794411833.88148,
+    "seen": 1794445587.1045797,
+    "ast_hash": "f53535e14005aafccc3fed74ecd721d3",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/044.txt": {
+    "mtime": 1794411833.7982213,
+    "seen": 1794445587.1045814,
+    "ast_hash": "8f6ad18450723695a5429984b8608842",
+    "semantic_hash": ""
+  },
+  "dataset/labels/train/045.txt": {
+    "mtime": 1794411833.46461,
+    "seen": 1794445587.1045833,
+    "ast_hash": "1b11f7283118394f2c58b430ed2ab3eb",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/002.txt": {
+    "mtime": 1794411834.1170073,
+    "seen": 1794445587.104585,
+    "ast_hash": "79b758fcd24a2849384a9cd1381fc1b7",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/007.txt": {
+    "mtime": 1794411834.00651,
+    "seen": 1794445587.1045866,
+    "ast_hash": "809fc2ad46019764427fd96216745335",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/008.txt": {
+    "mtime": 1794411834.1532984,
+    "seen": 1794445587.1045883,
+    "ast_hash": "bce027f05a67e346295842b33147bb47",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/009.txt": {
+    "mtime": 1794411834.028618,
+    "seen": 1794445587.10459,
+    "ast_hash": "c8791a04ec4bf8e5a1cafd93261453d8",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/015.txt": {
+    "mtime": 1794411834.0546875,
+    "seen": 1794445587.1045916,
+    "ast_hash": "6bdd7ecc2bba6343a0ae1a631e3b5007",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/016.txt": {
+    "mtime": 1794411834.0763526,
+    "seen": 1794445587.1045935,
+    "ast_hash": "eb90120bb3f8bf750ad2a8226eaa4b02",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/018.txt": {
+    "mtime": 1794411834.0968118,
+    "seen": 1794445587.1045952,
+    "ast_hash": "8e561ec745a3f36389aadbfa9b71140e",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/035.txt": {
+    "mtime": 1794411833.951921,
+    "seen": 1794445587.1045969,
+    "ast_hash": "bd147694d9bd281ed3c61d49a32546a3",
+    "semantic_hash": ""
+  },
+  "dataset/labels/val/041.txt": {
+    "mtime": 1794411834.1872408,
+    "seen": 1794445587.1045985,
+    "ast_hash": "234f64e2c4dc7b60d62326f22732be44",
+    "semantic_hash": ""
+  },
+  "templates/index.html": {
+    "mtime": 1794445827.410876,
+    "seen": 1794445930.317556,
+    "ast_hash": "3c499bdaab45b2cf36469acbd6226aba",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/001.jpg": {
+    "mtime": 1794411819.642132,
+    "seen": 1794445587.104602,
+    "ast_hash": "e637d642142c16189bedc00460755bec",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/003.jpg": {
+    "mtime": 1794411819.6746278,
+    "seen": 1794445587.104604,
+    "ast_hash": "1f8a041e7cdd51c3b6c2b940e43f0b5d",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/004.jpg": {
+    "mtime": 1794411819.6886764,
+    "seen": 1794445587.1046057,
+    "ast_hash": "085a7dad8b0b7472f5477f837122b5c9",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/005.jpg": {
+    "mtime": 1794411819.6954374,
+    "seen": 1794445587.1046076,
+    "ast_hash": "728db25ef3f9861dd03a952b872585f6",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/006.jpg": {
+    "mtime": 1794411819.7227533,
+    "seen": 1794445587.104609,
+    "ast_hash": "f562b1770cb16eac382d1b471402bd55",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/010.jpg": {
+    "mtime": 1794411819.771678,
+    "seen": 1794445587.104611,
+    "ast_hash": "badb85b82e3ebcea1b85d5c93e41da08",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/011.jpg": {
+    "mtime": 1794411819.7787733,
+    "seen": 1794445587.1046128,
+    "ast_hash": "2408a5bdad236c352d772ea21b6d1a82",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/012.jpg": {
+    "mtime": 1794411819.7938578,
+    "seen": 1794445587.1046145,
+    "ast_hash": "ff7d7f58b6550e6a59c2065b21eb7968",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/013.jpg": {
+    "mtime": 1794411819.8137627,
+    "seen": 1794445587.1046162,
+    "ast_hash": "84f20235d307b7b13ab0006a0dfbb843",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/014.jpg": {
+    "mtime": 1794411819.8343403,
+    "seen": 1794445587.1046183,
+    "ast_hash": "cd89a0cb7b2ee2615d88fd5d3e84dda2",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/017.jpg": {
+    "mtime": 1794411819.9067442,
+    "seen": 1794445587.1046197,
+    "ast_hash": "331d17d9104c6c0fd252627865892ddf",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/019.jpg": {
+    "mtime": 1794411819.9318035,
+    "seen": 1794445587.1046214,
+    "ast_hash": "55d68b27a0e8638528f9becc296acb1f",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/020.jpg": {
+    "mtime": 1794411819.9525042,
+    "seen": 1794445587.104623,
+    "ast_hash": "05014c9d34e32b619153d8d248d20ed4",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/021.jpg": {
+    "mtime": 1794411819.9661565,
+    "seen": 1794445587.1046345,
+    "ast_hash": "af2daf00e6c4df0d4dff4f2ca02f4f20",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/022.jpg": {
+    "mtime": 1794411819.987311,
+    "seen": 1794445587.1046364,
+    "ast_hash": "316a37fa06deda0b6bbb163810d38e58",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/023.jpg": {
+    "mtime": 1794411820.0012197,
+    "seen": 1794445587.104638,
+    "ast_hash": "3e6884f72787825be6fdf07dea53c427",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/024.jpg": {
+    "mtime": 1794411820.014823,
+    "seen": 1794445587.10464,
+    "ast_hash": "64481529dc85b2193636139c3ef34acb",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/025.jpg": {
+    "mtime": 1794411820.035164,
+    "seen": 1794445587.1046414,
+    "ast_hash": "8060507ebd3a71455cd8086b02dffb87",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/026.jpg": {
+    "mtime": 1794411820.0427568,
+    "seen": 1794445587.1046433,
+    "ast_hash": "1b1c7f19d51985c27d4b2a0d67e94e61",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/027.jpg": {
+    "mtime": 1794411820.0635123,
+    "seen": 1794445587.104645,
+    "ast_hash": "92babb38dbb2d8196037f7eb77ba8edf",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/028.jpg": {
+    "mtime": 1794411820.0774662,
+    "seen": 1794445587.104647,
+    "ast_hash": "5596c7e4b406b0b9e4108612e5fde8d9",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/029.jpg": {
+    "mtime": 1794411820.098436,
+    "seen": 1794445587.1046484,
+    "ast_hash": "bd8e5fda1fae537e213274a618e2e428",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/030.jpg": {
+    "mtime": 1794411820.1189618,
+    "seen": 1794445587.10465,
+    "ast_hash": "ecc42c9bb182cf32792069d2298c3889",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/031.jpg": {
+    "mtime": 1794411820.1468198,
+    "seen": 1794445587.1046517,
+    "ast_hash": "676da9d4007b415a2ae781ce7a8e2831",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/032.jpg": {
+    "mtime": 1794411820.1745493,
+    "seen": 1794445587.1046534,
+    "ast_hash": "be2208b0ac189df4fef8c1c804135d02",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/033.jpg": {
+    "mtime": 1794411820.188344,
+    "seen": 1794445587.104655,
+    "ast_hash": "1c63e62f562c8726636fac4a23361097",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/034.jpg": {
+    "mtime": 1794411820.2096133,
+    "seen": 1794445587.104657,
+    "ast_hash": "6f2a94dc0397387f6721bd8d581d3559",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/036.jpg": {
+    "mtime": 1794411820.230096,
+    "seen": 1794445587.1046586,
+    "ast_hash": "0a17a91d3857937ef40829468696bec6",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/037.jpg": {
+    "mtime": 1794411820.2370582,
+    "seen": 1794445587.1046605,
+    "ast_hash": "d4e5a402c170c702d9aa047fbd5ca62b",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/038.jpg": {
+    "mtime": 1794411820.264953,
+    "seen": 1794445587.1046622,
+    "ast_hash": "4ea8bf8514f29ece0aeb059e18d07571",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/039.jpg": {
+    "mtime": 1794411820.2780833,
+    "seen": 1794445587.1046638,
+    "ast_hash": "1c4399139610bd0e6f874158a69634cd",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/040.jpg": {
+    "mtime": 1794411820.2993715,
+    "seen": 1794445587.1046655,
+    "ast_hash": "679f1ad26e0ed29fe604532ae9d0a010",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/042.jpg": {
+    "mtime": 1794411820.3483572,
+    "seen": 1794445587.1046672,
+    "ast_hash": "69ca95a16389a9d809f8595f0dc3638a",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/043.jpg": {
+    "mtime": 1794411820.3621826,
+    "seen": 1794445587.1046689,
+    "ast_hash": "0f45897c58b21166c2a3650b5db9560b",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/044.jpg": {
+    "mtime": 1794411820.3692124,
+    "seen": 1794445587.1046705,
+    "ast_hash": "ba8e8487770257bc620bc39fc8d582ba",
+    "semantic_hash": ""
+  },
+  "dataset/images/train/045.jpg": {
+    "mtime": 1794411820.3827326,
+    "seen": 1794445587.1046722,
+    "ast_hash": "a3b18f4c4b83ec9d6d86dc85e5903854",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/002.jpg": {
+    "mtime": 1794411819.6650062,
+    "seen": 1794445587.1046739,
+    "ast_hash": "7c88f34166a1487f2d35ab76ed07e50b",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/007.jpg": {
+    "mtime": 1794411819.730207,
+    "seen": 1794445587.1046758,
+    "ast_hash": "d63939b003b28a5c8b88f24d8eea8c8b",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/008.jpg": {
+    "mtime": 1794411819.7373736,
+    "seen": 1794445587.1046774,
+    "ast_hash": "562e2457f931dcf9e71f912a6c2cd6cd",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/009.jpg": {
+    "mtime": 1794411819.7510357,
+    "seen": 1794445587.104679,
+    "ast_hash": "8c5ef9d28f2941c6cb82d958e4bbf91a",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/015.jpg": {
+    "mtime": 1794411819.8690336,
+    "seen": 1794445587.1046808,
+    "ast_hash": "aba39b95a418c604118a304b4cae5cd0",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/016.jpg": {
+    "mtime": 1794411819.894207,
+    "seen": 1794445587.1046822,
+    "ast_hash": "86760b96d9d5461e2193ac3948275c7e",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/018.jpg": {
+    "mtime": 1794411819.9178479,
+    "seen": 1794445587.104684,
+    "ast_hash": "54be79af6bc1cf368e7469694b4f756a",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/035.jpg": {
+    "mtime": 1794411820.2231424,
+    "seen": 1794445587.1046855,
+    "ast_hash": "085a7dad8b0b7472f5477f837122b5c9",
+    "semantic_hash": ""
+  },
+  "dataset/images/val/041.jpg": {
+    "mtime": 1794411820.3275397,
+    "seen": 1794445587.1046872,
+    "ast_hash": "6a96e3ae0b0fb1b164490203f0b2d721",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/001.jpg": {
+    "mtime": 1794411819.642132,
+    "seen": 1794445587.1046886,
+    "ast_hash": "e637d642142c16189bedc00460755bec",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/002.jpg": {
+    "mtime": 1794411819.6650062,
+    "seen": 1794445587.1046903,
+    "ast_hash": "7c88f34166a1487f2d35ab76ed07e50b",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/003.jpg": {
+    "mtime": 1794411819.6746278,
+    "seen": 1794445587.1046922,
+    "ast_hash": "1f8a041e7cdd51c3b6c2b940e43f0b5d",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/004.jpg": {
+    "mtime": 1794411819.6886764,
+    "seen": 1794445587.1046937,
+    "ast_hash": "085a7dad8b0b7472f5477f837122b5c9",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/005.jpg": {
+    "mtime": 1794411819.6954374,
+    "seen": 1794445587.1046956,
+    "ast_hash": "728db25ef3f9861dd03a952b872585f6",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/006.jpg": {
+    "mtime": 1794411819.7227533,
+    "seen": 1794445587.1046972,
+    "ast_hash": "f562b1770cb16eac382d1b471402bd55",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/007.jpg": {
+    "mtime": 1794411819.730207,
+    "seen": 1794445587.104699,
+    "ast_hash": "d63939b003b28a5c8b88f24d8eea8c8b",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/008.jpg": {
+    "mtime": 1794411819.7373736,
+    "seen": 1794445587.104701,
+    "ast_hash": "562e2457f931dcf9e71f912a6c2cd6cd",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/009.jpg": {
+    "mtime": 1794411819.7510357,
+    "seen": 1794445587.1047027,
+    "ast_hash": "8c5ef9d28f2941c6cb82d958e4bbf91a",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/010.jpg": {
+    "mtime": 1794411819.771678,
+    "seen": 1794445587.1047046,
+    "ast_hash": "badb85b82e3ebcea1b85d5c93e41da08",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/011.jpg": {
+    "mtime": 1794411819.7787733,
+    "seen": 1794445587.1047065,
+    "ast_hash": "2408a5bdad236c352d772ea21b6d1a82",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/012.jpg": {
+    "mtime": 1794411819.7938578,
+    "seen": 1794445587.1047084,
+    "ast_hash": "ff7d7f58b6550e6a59c2065b21eb7968",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/013.jpg": {
+    "mtime": 1794411819.8137627,
+    "seen": 1794445587.10471,
+    "ast_hash": "84f20235d307b7b13ab0006a0dfbb843",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/014.jpg": {
+    "mtime": 1794411819.8343403,
+    "seen": 1794445587.1047118,
+    "ast_hash": "cd89a0cb7b2ee2615d88fd5d3e84dda2",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/015.jpg": {
+    "mtime": 1794411819.8690336,
+    "seen": 1794445587.1047134,
+    "ast_hash": "aba39b95a418c604118a304b4cae5cd0",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/016.jpg": {
+    "mtime": 1794411819.894207,
+    "seen": 1794445587.104715,
+    "ast_hash": "86760b96d9d5461e2193ac3948275c7e",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/017.jpg": {
+    "mtime": 1794411819.9067442,
+    "seen": 1794445587.1047168,
+    "ast_hash": "331d17d9104c6c0fd252627865892ddf",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/018.jpg": {
+    "mtime": 1794411819.9178479,
+    "seen": 1794445587.1047184,
+    "ast_hash": "54be79af6bc1cf368e7469694b4f756a",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/019.jpg": {
+    "mtime": 1794411819.9318035,
+    "seen": 1794445587.10472,
+    "ast_hash": "55d68b27a0e8638528f9becc296acb1f",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/020.jpg": {
+    "mtime": 1794411819.9525042,
+    "seen": 1794445587.1047215,
+    "ast_hash": "05014c9d34e32b619153d8d248d20ed4",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/021.jpg": {
+    "mtime": 1794411819.9661565,
+    "seen": 1794445587.1047235,
+    "ast_hash": "af2daf00e6c4df0d4dff4f2ca02f4f20",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/022.jpg": {
+    "mtime": 1794411819.987311,
+    "seen": 1794445587.104727,
+    "ast_hash": "316a37fa06deda0b6bbb163810d38e58",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/023.jpg": {
+    "mtime": 1794411820.0012197,
+    "seen": 1794445587.104729,
+    "ast_hash": "3e6884f72787825be6fdf07dea53c427",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/024.jpg": {
+    "mtime": 1794411820.014823,
+    "seen": 1794445587.1047304,
+    "ast_hash": "64481529dc85b2193636139c3ef34acb",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/025.jpg": {
+    "mtime": 1794411820.035164,
+    "seen": 1794445587.1047318,
+    "ast_hash": "8060507ebd3a71455cd8086b02dffb87",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/026.jpg": {
+    "mtime": 1794411820.0427568,
+    "seen": 1794445587.1047337,
+    "ast_hash": "1b1c7f19d51985c27d4b2a0d67e94e61",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/027.jpg": {
+    "mtime": 1794411820.0635123,
+    "seen": 1794445587.1047354,
+    "ast_hash": "92babb38dbb2d8196037f7eb77ba8edf",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/028.jpg": {
+    "mtime": 1794411820.0774662,
+    "seen": 1794445587.104737,
+    "ast_hash": "5596c7e4b406b0b9e4108612e5fde8d9",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/029.jpg": {
+    "mtime": 1794411820.098436,
+    "seen": 1794445587.1047387,
+    "ast_hash": "bd8e5fda1fae537e213274a618e2e428",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/030.jpg": {
+    "mtime": 1794411820.1189618,
+    "seen": 1794445587.1047406,
+    "ast_hash": "ecc42c9bb182cf32792069d2298c3889",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/031.jpg": {
+    "mtime": 1794411820.1468198,
+    "seen": 1794445587.104742,
+    "ast_hash": "676da9d4007b415a2ae781ce7a8e2831",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/032.jpg": {
+    "mtime": 1794411820.1745493,
+    "seen": 1794445587.104744,
+    "ast_hash": "be2208b0ac189df4fef8c1c804135d02",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/033.jpg": {
+    "mtime": 1794411820.188344,
+    "seen": 1794445587.1047456,
+    "ast_hash": "1c63e62f562c8726636fac4a23361097",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/034.jpg": {
+    "mtime": 1794411820.2096133,
+    "seen": 1794445587.1047475,
+    "ast_hash": "6f2a94dc0397387f6721bd8d581d3559",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/035.jpg": {
+    "mtime": 1794411820.2231424,
+    "seen": 1794445587.104749,
+    "ast_hash": "085a7dad8b0b7472f5477f837122b5c9",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/036.jpg": {
+    "mtime": 1794411820.230096,
+    "seen": 1794445587.1047506,
+    "ast_hash": "0a17a91d3857937ef40829468696bec6",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/037.jpg": {
+    "mtime": 1794411820.2370582,
+    "seen": 1794445587.104752,
+    "ast_hash": "d4e5a402c170c702d9aa047fbd5ca62b",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/038.jpg": {
+    "mtime": 1794411820.264953,
+    "seen": 1794445587.104754,
+    "ast_hash": "4ea8bf8514f29ece0aeb059e18d07571",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/039.jpg": {
+    "mtime": 1794411820.2780833,
+    "seen": 1794445587.1047556,
+    "ast_hash": "1c4399139610bd0e6f874158a69634cd",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/040.jpg": {
+    "mtime": 1794411820.2993715,
+    "seen": 1794445587.1047573,
+    "ast_hash": "679f1ad26e0ed29fe604532ae9d0a010",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/041.jpg": {
+    "mtime": 1794411820.3275397,
+    "seen": 1794445587.1047587,
+    "ast_hash": "6a96e3ae0b0fb1b164490203f0b2d721",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/042.jpg": {
+    "mtime": 1794411820.3483572,
+    "seen": 1794445587.1047606,
+    "ast_hash": "69ca95a16389a9d809f8595f0dc3638a",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/043.jpg": {
+    "mtime": 1794411820.3621826,
+    "seen": 1794445587.104762,
+    "ast_hash": "0f45897c58b21166c2a3650b5db9560b",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/044.jpg": {
+    "mtime": 1794411820.3692124,
+    "seen": 1794445587.104764,
+    "ast_hash": "ba8e8487770257bc620bc39fc8d582ba",
+    "semantic_hash": ""
+  },
+  "dataset/supermarket/Supermarket shelves/Supermarket shelves/images/045.jpg": {
+    "mtime": 1794411820.3827326,
+    "seen": 1794445587.1047657,
+    "ast_hash": "a3b18f4c4b83ec9d6d86dc85e5903854",
+    "semantic_hash": ""
+  },
+  "runs/productos/BoxF1_curve.png": {
+    "mtime": 1794445553.5128677,
+    "seen": 1794445587.1047935,
+    "ast_hash": "442fabd06d89ca2f81ac668f71be41ed",
+    "semantic_hash": ""
+  },
+  "runs/productos/BoxPR_curve.png": {
+    "mtime": 1794445553.1266875,
+    "seen": 1794445587.1047955,
+    "ast_hash": "bc84d1ddcc38d91920b583c27b32364c",
+    "semantic_hash": ""
+  },
+  "runs/productos/BoxP_curve.png": {
+    "mtime": 1794445553.9131627,
+    "seen": 1794445587.1047971,
+    "ast_hash": "003b6fa2ab29caa8f813121829b21e6d",
+    "semantic_hash": ""
+  },
+  "runs/productos/BoxR_curve.png": {
+    "mtime": 1794445554.2758052,
+    "seen": 1794445587.1047988,
+    "ast_hash": "3d772d430d2306a0355538605a15108e",
+    "semantic_hash": ""
+  },
+  "runs/productos/confusion_matrix.png": {
+    "mtime": 1794445555.4372509,
+    "seen": 1794445587.1048005,
+    "ast_hash": "435680363b4455cf98f3e2263289ec55",
+    "semantic_hash": ""
+  },
+  "runs/productos/confusion_matrix_normalized.png": {
+    "mtime": 1794445554.9198706,
+    "seen": 1794445587.1048024,
+    "ast_hash": "54a4fbdd3ab12898e8930dfe6f0d5c3d",
+    "semantic_hash": ""
+  },
+  "runs/productos/labels.jpg": {
+    "mtime": 1794444609.4271564,
+    "seen": 1794445587.1048038,
+    "ast_hash": "1b7e390feb29ab4cd030e34b3df07b29",
+    "semantic_hash": ""
+  },
+  "runs/productos/results.png": {
+    "mtime": 1794445556.884619,
+    "seen": 1794445587.1048057,
+    "ast_hash": "bbaad92140887c674d6a29002f8a2155",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch0.jpg": {
+    "mtime": 1794444614.3096263,
+    "seen": 1794445587.1048071,
+    "ast_hash": "ed90657f74cd4c42e05e1c22812e6415",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch1.jpg": {
+    "mtime": 1794444617.289057,
+    "seen": 1794445587.104809,
+    "ast_hash": "70732fde1adbb6fd449985e452fc1b51",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch180.jpg": {
+    "mtime": 1794445224.2418256,
+    "seen": 1794445587.1048107,
+    "ast_hash": "2daf76f568dc654c055b5e884d4a9efe",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch181.jpg": {
+    "mtime": 1794445226.5217736,
+    "seen": 1794445587.1048126,
+    "ast_hash": "76a733afcefb7922edb14ea59c8319f8",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch182.jpg": {
+    "mtime": 1794445229.3213818,
+    "seen": 1794445587.1048143,
+    "ast_hash": "ce9162182f7792a932e946b2f09ad15f",
+    "semantic_hash": ""
+  },
+  "runs/productos/train_batch2.jpg": {
+    "mtime": 1794444620.4265628,
+    "seen": 1794445587.1048162,
+    "ast_hash": "383d3a39c439fa58a59ff7826c09bfcc",
+    "semantic_hash": ""
+  },
+  "runs/productos/val_batch0_labels.jpg": {
+    "mtime": 1794445552.4214492,
+    "seen": 1794445587.1048174,
+    "ast_hash": "cfbb5d6b224c0bf854b21cca477e3d69",
+    "semantic_hash": ""
+  },
+  "runs/productos/val_batch0_pred.jpg": {
+    "mtime": 1794445551.9766736,
+    "seen": 1794445587.1048193,
+    "ast_hash": "f1345bcf922d948c459a9ec8cdf06981",
+    "semantic_hash": ""
+  },
+  "runs/productos/val_batch1_labels.jpg": {
+    "mtime": 1794445552.630592,
+    "seen": 1794445587.1048207,
+    "ast_hash": "cfd5a28931999621dd9adda733ccddcd",
+    "semantic_hash": ""
+  },
+  "runs/productos/val_batch1_pred.jpg": {
+    "mtime": 1794445552.6491566,
+    "seen": 1794445587.1048226,
+    "ast_hash": "d185368ec6a5df40a1256d4afcdcb915",
+    "semantic_hash": ""
+  },
+  "static/img/images.jpg": {
+    "mtime": 1792775414.7203176,
+    "seen": 1794445587.1048243,
+    "ast_hash": "b359382c951e0339812cb8c68199a643",
+    "semantic_hash": ""
+  },
+  "static/uploads/captura.jpg": {
+    "mtime": 1794448983.7759128,
+    "seen": 1794448996.4442499,
+    "ast_hash": "e386dcde6f0a1249c1b27bb383398126",
+    "semantic_hash": ""
+  },
+  "static/referencias/aguacate.jpg": {
+    "mtime": 1794447645.304394,
+    "seen": 1794448674.7187417,
+    "ast_hash": "5906b1cd837c928dd1bdb2cf4d87b7a9",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "voz": {
+    "idioma": "es-CO",
+    "velocidad": 1.0,
+    "tono": 1.0,
+    "volumen": 1.0,
+    "plantillas": {
+      "alta": [
+        "Es {nombre}. {descripcion}",
+        "Esto es {nombre}. {descripcion}"
+      ],
+      "media": [
+        "Creo que es {nombre}. {descripcion}"
+      ],
+      "baja": [
+        "No estoy seguro, pero podría ser {nombre}. Intenta tomar otra foto con mejor luz."
+      ],
+      "ninguno": [
+        "No pude reconocer ningún producto. Acerca el producto a la cámara e inténtalo de nuevo."
+      ]
+    },
+    "umbral_alta": 0.75,
+    "umbral_media": 0.45
+  },
+  "productos": {
+    "Golden-Delicious": {
+      "nombre": "Manzana Golden Delicious",
+      "categoria": "Manzana",
+      "descripcion": "Tiene la pulpa blanca y jugosa y la cáscara amarillo verdosa. Su sabor es suave y dulce, ideal para postres.",
+      "precio": "no disponible"
+    },
+    "Granny-Smith": {
+      "nombre": "Manzana Granny Smith",
+      "categoria": "Manzana",
+      "descripcion": "Es una manzana verde de pulpa blanca y firme, con una acidez clara en el sabor.",
+      "precio": "no disponible"
+    },
+    "Pink-Lady": {
+      "nombre": "Manzana Pink Lady",
+      "categoria": "Manzana",
+      "descripcion": "Se parece a la Royal Gala, pero es aún más dulce y crujiente.",
+      "precio": "no disponible"
+    },
+    "Red-Delicious": {
+      "nombre": "Manzana Red Delicious",
+      "categoria": "Manzana",
+      "descripcion": "Es una manzana de color rojo oscuro, con pulpa relativamente blanda y sabor dulce.",
+      "precio": "no disponible"
+    },
+    "Royal-Gala": {
+      "nombre": "Manzana Royal Gala",
+      "categoria": "Manzana",
+      "descripcion": "Es una manzana crujiente y muy jugosa, de pulpa blanco amarillenta y cáscara fina, con manchas rojas y amarillas.",
+      "precio": "no disponible"
+    },
+    "Avocado": {
+      "nombre": "Aguacate",
+      "categoria": "Aguacate",
+      "descripcion": "Es una fruta con una semilla grande en el centro. Su pulpa es amarillo claro y la cáscara va de verde claro a verde muy oscuro. Va bien en entradas, ensaladas y en el guacamole.",
+      "precio": "no disponible"
+    },
+    "Banana": {
+      "nombre": "Banano",
+      "categoria": "Banano",
+      "descripcion": "Es una fruta ideal para un refrigerio. Es sensible a la temperatura, a la deshidratación y al frío, por eso se guarda a temperatura ambiente y nunca en la nevera.",
+      "precio": "no disponible"
+    },
+    "Kiwi": {
+      "nombre": "Kiwi",
+      "categoria": "Kiwi",
+      "descripcion": "Tiene un sabor dulce con una acidez marcada y es rico en vitamina C.",
+      "precio": "no disponible"
+    },
+    "Lemon": {
+      "nombre": "Limón",
+      "categoria": "Limón",
+      "descripcion": "Se usa para dar sabor a comidas y bebidas, y tiene un gusto muy ácido y agrio.",
+      "precio": "no disponible"
+    },
+    "Lime": {
+      "nombre": "Lima",
+      "categoria": "Lima",
+      "descripcion": "Como el limón, es ácida, pero es más jugosa y aromática. Se usa sobre todo el jugo, aunque la cáscara también sirve.",
+      "precio": "no disponible"
+    },
+    "Mango": {
+      "nombre": "Mango",
+      "categoria": "Mango",
+      "descripcion": "Tiene un sabor fresco, intenso y dulce, con un toque exótico. Tiene una semilla grande y ovalada, así que lo mejor es cortarlo con la cáscara, a lo largo de ambos lados de la semilla. Se come natural o en postres y platos principales.",
+      "precio": "no disponible"
+    },
+    "Cantaloupe": {
+      "nombre": "Melón cantalupo",
+      "categoria": "Melón",
+      "descripcion": "Es un melón pequeño y redondo, de cáscara amarillo verdosa con un patrón de red. Su pulpa es naranja, jugosa y dulce.",
+      "precio": "no disponible"
+    },
+    "Galia-Melon": {
+      "nombre": "Melón Galia",
+      "categoria": "Melón",
+      "descripcion": "Es un melón pequeño y redondo, de cáscara verde amarillenta o café claro con patrón de red. Su pulpa es firme y jugosa, de color crema y sabor dulce e intenso.",
+      "precio": "no disponible"
+    },
+    "Honeydew-Melon": {
+      "nombre": "Melón dulce",
+      "categoria": "Melón",
+      "descripcion": "Es un melón ovalado de cáscara amarilla. Su pulpa es amarillo crema, jugosa y fresca, con un sabor dulce más suave que otros melones.",
+      "precio": "no disponible"
+    },
+    "Watermelon": {
+      "nombre": "Sandía",
+      "categoria": "Sandía",
+      "descripcion": "Es más jugosa que los melones, de cáscara redonda verde clara con rayas verde oscuro. Su pulpa es muy jugosa, suave y dulce, y puede tener o no semillas.",
+      "precio": "no disponible"
+    },
+    "Nectarine": {
+      "nombre": "Nectarina",
+      "categoria": "Nectarina",
+      "descripcion": "Es una fruta de hueso, de cáscara lisa y pulpa amarilla o naranja, algo más firme que el durazno. Se come natural y también sirve para pasteles y mermeladas.",
+      "precio": "no disponible"
+    },
+    "Orange": {
+      "nombre": "Naranja",
+      "categoria": "Naranja",
+      "descripcion": "Hay muchos tipos de naranja que maduran en distintas épocas del año. Es una fuente muy importante de vitamina C, que se conserva mejor si la fruta se come natural.",
+      "precio": "no disponible"
+    },
+    "Papaya": {
+      "nombre": "Papaya",
+      "categoria": "Papaya",
+      "descripcion": "Su pulpa es de color salmón y de textura suave como la mantequilla. Es rica en vitaminas A y C.",
+      "precio": "no disponible"
+    },
+    "Passion-Fruit": {
+      "nombre": "Maracuyá",
+      "categoria": "Maracuyá",
+      "descripcion": "Es una fruta pequeña, redonda u ovalada, de cáscara arrugada amarilla o morada. Por dentro tiene muchas semillas comestibles rodeadas de pulpa jugosa, con un sabor intenso y fresco.",
+      "precio": "no disponible"
+    },
+    "Peach": {
+      "nombre": "Durazno",
+      "categoria": "Durazno",
+      "descripcion": "Es una fruta de hueso, de pulpa amarilla o naranja y cáscara aterciopelada. Se come natural y también sirve para pasteles, mermeladas y conservas.",
+      "precio": "no disponible"
+    },
+    "Anjou": {
+      "nombre": "Pera Anjou",
+      "categoria": "Pera",
+      "descripcion": "Es una pera clásica de forma redondeada y cáscara fina amarillo verdosa. Su pulpa es jugosa y de sabor dulce y agradable.",
+      "precio": "no disponible"
+    },
+    "Conference": {
+      "nombre": "Pera Conference",
+      "categoria": "Pera",
+      "descripcion": "Es una pera mediana, alargada como una botella, de color verde amarillento con manchas doradas. Sabe mejor cuando está bien madura. Va bien en postres, con quesos o sola.",
+      "precio": "no disponible"
+    },
+    "Kaiser": {
+      "nombre": "Pera Kaiser",
+      "categoria": "Pera",
+      "descripcion": "Tiene forma de gota y cáscara mate, café amarillenta. Su pulpa blanco amarillenta es crujiente, jugosa y dulce, con algo de acidez. Combina muy bien con quesos y vino, y también es buena para cocinar porque mantiene su forma.",
+      "precio": "no disponible"
+    },
+    "Pineapple": {
+      "nombre": "Piña",
+      "categoria": "Piña",
+      "descripcion": "Es ideal para comer natural, en postres y ensaladas de frutas. Recuerda quitar el corazón del centro.",
+      "precio": "no disponible"
+    },
+    "Plum": {
+      "nombre": "Ciruela",
+      "categoria": "Ciruela",
+      "descripcion": "Las ciruelas maduras tienen la pulpa blanda, jugosa y dulce. Se comen naturales y también se usan en conservas y pasteles.",
+      "precio": "no disponible"
+    },
+    "Pomegranate": {
+      "nombre": "Granada",
+      "categoria": "Granada",
+      "descripcion": "Tiene un sabor dulce, suave y refrescante, ideal para ensaladas y postres. Solo se comen sus semillas, que se sacan abriendo la fruta y golpeando la cáscara con una cuchara de madera sobre un recipiente.",
+      "precio": "no disponible"
+    },
+    "Red-Grapefruit": {
+      "nombre": "Toronja roja",
+      "categoria": "Toronja roja",
+      "descripcion": "Tiene la pulpa roja y la cáscara ligeramente rosada. Su sabor es amargo, fresco y ácido a la vez, y es más dulce que la toronja amarilla.",
+      "precio": "no disponible"
+    },
+    "Satsumas": {
+      "nombre": "Mandarina satsuma",
+      "categoria": "Mandarina",
+      "descripcion": "Es un cítrico pequeño y dulce, muy popular como refrigerio.",
+      "precio": "no disponible"
+    },
+    "Bravo-Apple-Juice": {
+      "nombre": "Jugo de manzana Bravo",
+      "categoria": "Jugo",
+      "descripcion": "Jugo de manzana listo para tomar, hecho de concentrado. Tiene un sabor fresco y ácido, ideal para el desayuno o para calmar la sed.",
+      "precio": "no disponible"
+    },
+    "Bravo-Orange-Juice": {
+      "nombre": "Jugo de naranja Bravo",
+      "categoria": "Jugo",
+      "descripcion": "Jugo de naranja listo para tomar, hecho de concentrado. Tiene un sabor fresco y ácido, ideal para el desayuno o para calmar la sed. Sin pulpa.",
+      "precio": "no disponible"
+    },
+    "God-Morgon-Apple-Juice": {
+      "nombre": "Jugo de manzana God Morgon",
+      "categoria": "Jugo",
+      "descripcion": "Es un jugo sin filtrar, más rico y con auténtico sabor a manzana.",
+      "precio": "no disponible"
+    },
+    "God-Morgon-Orange-Juice": {
+      "nombre": "Jugo de naranja God Morgon",
+      "categoria": "Jugo",
+      "descripcion": "Está exprimido de naranjas maduradas al sol y recogidas a mano. ¡El envase contiene el jugo de 2 kilos de naranjas!",
+      "precio": "no disponible"
+    },
+    "God-Morgon-Orange-Red-Grapefruit-Juice": {
+      "nombre": "Jugo de naranja y toronja roja God Morgon",
+      "categoria": "Jugo",
+      "descripcion": "Es una mezcla fresca de jugo de naranja dulce y toronja roja.",
+      "precio": "no disponible"
+    },
+    "God-Morgon-Red-Grapefruit-Juice": {
+      "nombre": "Jugo de toronja roja God Morgon",
+      "categoria": "Jugo",
+      "descripcion": "Es una dosis de vitaminas, suave, de sabor rico y tan refrescante como solo la toronja roja puede ser.",
+      "precio": "no disponible"
+    },
+    "Tropicana-Apple-Juice": {
+      "nombre": "Jugo de manzana Tropicana",
+      "categoria": "Jugo",
+      "descripcion": "Es un jugo listo para tomar, con pulpa, exprimido de manzanas. No es de concentrado y está ligeramente pasteurizado.",
+      "precio": "no disponible"
+    },
+    "Tropicana-Golden-Grapefruit": {
+      "nombre": "Jugo de toronja Tropicana",
+      "categoria": "Jugo",
+      "descripcion": "Es un jugo listo para tomar, con pulpa, exprimido de toronja. No es de concentrado y está ligeramente pasteurizado.",
+      "precio": "no disponible"
+    },
+    "Tropicana-Juice-Smooth": {
+      "nombre": "Jugo de naranja Tropicana sin pulpa",
+      "categoria": "Jugo",
+      "descripcion": "Es un jugo listo para tomar, sin pulpa, exprimido de naranjas maduradas al sol. No es de concentrado y está ligeramente pasteurizado.",
+      "precio": "no disponible"
+    },
+    "Tropicana-Mandarin-Morning": {
+      "nombre": "Jugo Tropicana Mandarin Morning",
+      "categoria": "Jugo",
+      "descripcion": "Es un jugo listo para tomar, sin pulpa, hecho de naranja, mandarina y uvas. No es de concentrado y está ligeramente pasteurizado.",
+      "precio": "no disponible"
+    },
+    "Arla-Ecological-Medium-Fat-Milk": {
+      "nombre": "Leche ecológica semidescremada Arla",
+      "categoria": "Leche",
+      "descripcion": "Leche fresca semidescremada hecha con leche orgánica de granjas suecas. Tiene un sabor completo y es una buena opción para el desayuno, con cereales o como bebida en las comidas. Es una fuente natural de proteína, calcio y vitamina B12.",
+      "precio": "no disponible"
+    },
+    "Arla-Lactose-Medium-Fat-Milk": {
+      "nombre": "Leche deslactosada semidescremada Arla",
+      "categoria": "Leche",
+      "descripcion": "Leche semidescremada sin lactosa, pensada para adultos y niños con intolerancia a la lactosa. Tiene un sabor completo y sirve para el desayuno, con cereales o como bebida.",
+      "precio": "no disponible"
+    },
+    "Arla-Medium-Fat-Milk": {
+      "nombre": "Leche semidescremada Arla",
+      "categoria": "Leche",
+      "descripcion": "Leche fresca semidescremada hecha con leche de granjas suecas. Tiene un sabor completo y es una buena opción para el desayuno, con cereales o como bebida. Es una fuente natural de proteína, calcio y vitamina B12.",
+      "precio": "no disponible"
+    },
+    "Arla-Standard-Milk": {
+      "nombre": "Leche entera Arla",
+      "categoria": "Leche",
+      "descripcion": "Leche fresca entera hecha con leche de granjas suecas. Su sabor es redondo y cremoso, por eso es especialmente buena para el café, el té y el chocolate. También sirve para cocinar y con frutas del bosque.",
+      "precio": "no disponible"
+    },
+    "Garant-Ecological-Medium-Fat-Milk": {
+      "nombre": "Leche ecológica semidescremada Garant",
+      "categoria": "Leche",
+      "descripcion": "Leche orgánica semidescremada de granjas suecas certificadas, con 1,5 por ciento de grasa.",
+      "precio": "no disponible"
+    },
+    "Garant-Ecological-Standard-Milk": {
+      "nombre": "Leche ecológica entera Garant",
+      "categoria": "Leche",
+      "descripcion": "Leche ecológica de granjas suecas certificadas.",
+      "precio": "no disponible"
+    },
+    "Oatly-Natural-Oatghurt": {
+      "nombre": "Yogur de avena natural Oatly",
+      "categoria": "Yogur de avena",
+      "descripcion": "Producto vegetal de avena que se usa como yogur. También sirve para salsas frías.",
+      "precio": "no disponible"
+    },
+    "Oatly-Oat-Milk": {
+      "nombre": "Bebida de avena Oatly",
+      "categoria": "Bebida de avena",
+      "descripcion": "Bebida natural de avena, enriquecida con calcio y vitaminas. Dura mucho y se puede guardar a temperatura ambiente.",
+      "precio": "no disponible"
+    },
+    "Arla-Ecological-Sour-Cream": {
+      "nombre": "Crema agria ecológica Arla",
+      "categoria": "Crema agria",
+      "descripcion": "Crema agria orgánica hecha con crema fresca. Tiene un sabor ácido, cremoso y fresco. Es excelente como acompañante o como base de salsas frías y aderezos.",
+      "precio": "no disponible"
+    },
+    "Arla-Sour-Cream": {
+      "nombre": "Crema agria Arla",
+      "categoria": "Crema agria",
+      "descripcion": "Crema agria hecha con crema fresca. Tiene un sabor ácido, cremoso y fresco. Es excelente como acompañante o como base de salsas frías y aderezos, y suaviza el picante de los platos.",
+      "precio": "no disponible"
+    },
+    "Arla-Sour-Milk": {
+      "nombre": "Leche agria Arla",
+      "categoria": "Leche agria",
+      "descripcion": "Leche agria clásica, de sabor ligeramente ácido y textura algo espesa. Se come con muesli, cereales, fruta o frutos rojos.",
+      "precio": "no disponible"
+    },
+    "Alpro-Blueberry-Soyghurt": {
+      "nombre": "Yogur de soya con arándanos Alpro",
+      "categoria": "Yogur de soya",
+      "descripcion": "Producto a base de soya que se usa como yogur, con suave sabor a arándanos y textura cremosa.",
+      "precio": "no disponible"
+    },
+    "Alpro-Vanilla-Soyghurt": {
+      "nombre": "Yogur de soya con vainilla Alpro",
+      "categoria": "Yogur de soya",
+      "descripcion": "Producto a base de soya que se usa como yogur, con suave sabor a vainilla y textura cremosa.",
+      "precio": "no disponible"
+    },
+    "Alpro-Fresh-Soy-Milk": {
+      "nombre": "Bebida de soya fresca Alpro",
+      "categoria": "Bebida de soya",
+      "descripcion": "Bebida fresca a base de soya, enriquecida con calcio y vitaminas.",
+      "precio": "no disponible"
+    },
+    "Alpro-Shelf-Soy-Milk": {
+      "nombre": "Bebida de soya Alpro de larga duración",
+      "categoria": "Bebida de soya",
+      "descripcion": "Bebida a base de soya, enriquecida con calcio y vitaminas. Se puede guardar a temperatura ambiente.",
+      "precio": "no disponible"
+    },
+    "Arla-Mild-Vanilla-Yoghurt": {
+      "nombre": "Yogur de vainilla Arla",
+      "categoria": "Yogur",
+      "descripcion": "Yogur suave de vainilla, de textura cremosa y sabor redondo. Va bien en el desayuno y en las meriendas, solo o con cereales y fruta. También es una buena base para batidos.",
+      "precio": "no disponible"
+    },
+    "Arla-Natural-Mild-Low-Fat-Yoghurt": {
+      "nombre": "Yogur natural bajo en grasa Arla",
+      "categoria": "Yogur",
+      "descripcion": "Yogur light de textura cremosa y sabor natural. Con poca grasa, es buena opción para comer sano sin perder sabor. Va bien en el desayuno o en una merienda.",
+      "precio": "no disponible"
+    },
+    "Arla-Natural-Yoghurt": {
+      "nombre": "Yogur natural Arla",
+      "categoria": "Yogur",
+      "descripcion": "Yogur cremoso y algo más ácido, con un claro carácter de yogur. Va bien con nueces, miel y frutos rojos, y también en salsas, panes y bebidas de yogur.",
+      "precio": "no disponible"
+    },
+    "Valio-Vanilla-Yoghurt": {
+      "nombre": "Yogur de vainilla Valio",
+      "categoria": "Yogur",
+      "descripcion": "El original: un yogur cremoso de vainilla con 30 por ciento menos azúcar añadida que un yogur saborizado normal. Va bien en el desayuno y en las meriendas.",
+      "precio": "no disponible"
+    },
+    "Yoggi-Strawberry-Yoghurt": {
+      "nombre": "Yogur de fresa Yoggi",
+      "categoria": "Yogur",
+      "descripcion": "Yogur cremoso y rico en fruta, hecho con ingredientes naturales, con suave sabor a fresa y vainilla. Sirve para el desayuno, una merienda rápida o un postre sencillo.",
+      "precio": "no disponible"
+    },
+    "Yoggi-Vanilla-Yoghurt": {
+      "nombre": "Yogur de vainilla Yoggi",
+      "categoria": "Yogur",
+      "descripcion": "Yogur cremoso hecho con ingredientes naturales y un suave sabor a vainilla real de Madagascar. Sirve para el desayuno, una merienda rápida o un postre sencillo.",
+      "precio": "no disponible"
+    },
+    "Asparagus": {
+      "nombre": "Espárragos",
+      "categoria": "Espárrago",
+      "descripcion": "Tiene un sabor suave y agradable, y sirve como acompañante o plato de verduras. Se pueden comer crudos, pero normalmente se cocinan hervidos en agua con poca sal o a la parrilla. Se guardan en la nevera y duran máximo una semana.",
+      "precio": "no disponible"
+    },
+    "Aubergine": {
+      "nombre": "Berenjena",
+      "categoria": "Berenjena",
+      "descripcion": "Suele ser de color violeta oscuro, con cáscara brillante y de 15 a 20 centímetros de largo. Su pulpa es blanca y siempre se come cocinada. Va bien en guisos, gratinados y en la musaka.",
+      "precio": "no disponible"
+    },
+    "Cabbage": {
+      "nombre": "Repollo",
+      "categoria": "Repollo",
+      "descripcion": "El repollo blanco se puede comer crudo y también va bien en rollitos, sopas y guisos.",
+      "precio": "no disponible"
+    },
+    "Carrots": {
+      "nombre": "Zanahoria",
+      "categoria": "Zanahoria",
+      "descripcion": "Su color naranja viene del betacaroteno, que el cuerpo convierte en vitamina A. Es dulce y crujiente. Se come cruda y también se usa en guisos, gratinados, sopas y salteados.",
+      "precio": "no disponible"
+    },
+    "Cucumber": {
+      "nombre": "Pepino",
+      "categoria": "Pepino",
+      "descripcion": "Pepino fresco. Va bien en la ensalada o en el sándwich.",
+      "precio": "no disponible"
+    },
+    "Garlic": {
+      "nombre": "Ajo",
+      "categoria": "Ajo",
+      "descripcion": "Tiene un sabor y un olor únicos, y es un buen condimento para pastas, guisos y mezclas.",
+      "precio": "no disponible"
+    },
+    "Ginger": {
+      "nombre": "Jengibre",
+      "categoria": "Jengibre",
+      "descripcion": "Es una raíz de sabor picante característico, muy usada en la cocina asiática. Sirve para condimentar verduras, currys, arroz, carnes y pescados, y también va bien en galletas y postres dulces.",
+      "precio": "no disponible"
+    },
+    "Leek": {
+      "nombre": "Puerro",
+      "categoria": "Puerro",
+      "descripcion": "Tiene un sabor a cebolla más suave. Se usa sobre todo en sopas y guisos, y también se puede cortar fino en ensaladas. Se usa principalmente la parte blanca.",
+      "precio": "no disponible"
+    },
+    "Brown-Cap-Mushroom": {
+      "nombre": "Champiñón café",
+      "categoria": "Champiñón",
+      "descripcion": "También llamado champiñón castaño, es de color café y de sabor más intenso que el blanco. Se puede comer crudo en ensaladas, hervido o salteado.",
+      "precio": "no disponible"
+    },
+    "Yellow-Onion": {
+      "nombre": "Cebolla amarilla",
+      "categoria": "Cebolla",
+      "descripcion": "Es un buen condimento. Va bien tanto en frío como en la cocina caliente.",
+      "precio": "no disponible"
+    },
+    "Green-Bell-Pepper": {
+      "nombre": "Pimentón verde",
+      "categoria": "Pimentón",
+      "descripcion": "Es un pimentón sin madurar, por eso es algo más firme que los demás, ideal para platos calientes como el chili, pasteles, gratinados y guisos.",
+      "precio": "no disponible"
+    },
+    "Orange-Bell-Pepper": {
+      "nombre": "Pimentón naranja",
+      "categoria": "Pimentón",
+      "descripcion": "Es más dulce que el verde y tiene más vitaminas y antioxidantes. Se come crudo en ensaladas, y también salteado, guisado o gratinado.",
+      "precio": "no disponible"
+    },
+    "Red-Bell-Pepper": {
+      "nombre": "Pimentón rojo",
+      "categoria": "Pimentón",
+      "descripcion": "Es mucho más dulce que el verde y tiene más vitaminas y antioxidantes. Se come crudo en ensaladas, y también salteado, guisado o relleno.",
+      "precio": "no disponible"
+    },
+    "Yellow-Bell-Pepper": {
+      "nombre": "Pimentón amarillo",
+      "categoria": "Pimentón",
+      "descripcion": "Es mucho más dulce que el verde y tiene más vitaminas y antioxidantes. Se come crudo en ensaladas, y también salteado, guisado o relleno.",
+      "precio": "no disponible"
+    },
+    "Floury-Potato": {
+      "nombre": "Papa harinosa",
+      "categoria": "Papa",
+      "descripcion": "Papas harinosas. Son especialmente buenas para el puré.",
+      "precio": "no disponible"
+    },
+    "Solid-Potato": {
+      "nombre": "Papa firme",
+      "categoria": "Papa",
+      "descripcion": "Papas firmes. Son una buena papa para todo uso, que sirve para casi cualquier preparación.",
+      "precio": "no disponible"
+    },
+    "Sweet-Potato": {
+      "nombre": "Batata",
+      "categoria": "Papa",
+      "descripcion": "Es un tubérculo alargado y de forma irregular, a veces más grande que la papa común, con cáscara café claro o roja. Se usa como la papa, pero su sabor es muy dulce y es un poco más blanda. También sirve para postres y pasteles.",
+      "precio": "no disponible"
+    },
+    "Red-Beet": {
+      "nombre": "Remolacha",
+      "categoria": "Remolacha",
+      "descripcion": "Tiene un sabor terroso y dulce. Se come como acompañante, cocida o en conserva, y también en sopa o rallada en ensalada. Es sensible al calor, a las heladas y a la deshidratación, por eso se guarda en un lugar fresco.",
+      "precio": "no disponible"
+    },
+    "Beef-Tomato": {
+      "nombre": "Tomate grande",
+      "categoria": "Tomate",
+      "descripcion": "Es un tomate extra grande, ideal para hamburguesas, a la parrilla o al horno.",
+      "precio": "no disponible"
+    },
+    "Regular-Tomato": {
+      "nombre": "Tomate redondo",
+      "categoria": "Tomate",
+      "descripcion": "Tomates redondos y buenos. Se lavan y se usan en la ensalada o en el sándwich.",
+      "precio": "no disponible"
+    },
+    "Vine-Tomato": {
+      "nombre": "Tomate en rama",
+      "categoria": "Tomate",
+      "descripcion": "Tomates redondos que vienen con la rama en el empaque. Se lavan y se usan en la ensalada o en el sándwich.",
+      "precio": "no disponible"
+    },
+    "Zucchini": {
+      "nombre": "Zucchini",
+      "categoria": "Calabacín",
+      "descripcion": "Se puede comer crudo, pero normalmente se usa en sopas, guisos y salteados.",
+      "precio": "no disponible"
+    }
+  }
+}

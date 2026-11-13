@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Modelos grandes / datasets (sube manualmente si los necesitas)
+runs/
+dataset/
+dataset_cls/
+
+# Entorno
+.env
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
