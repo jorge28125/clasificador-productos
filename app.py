@@ -5,6 +5,12 @@ from PIL import Image, ImageOps
 from flask import Flask, render_template, request, jsonify
 from ultralytics import YOLO
 
+try:
+    import cv2
+    CV2_AVAILABLE = True
+except Exception:
+    CV2_AVAILABLE = False
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 
@@ -80,6 +86,11 @@ def construir_texto_voz(info, confianza):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/health')
+def health():
+    return jsonify({'status': 'ok', 'model': 'loaded'})
 
 
 @app.route('/predict', methods=['POST'])
