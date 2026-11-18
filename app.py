@@ -1,9 +1,10 @@
 import os
 import json
 import random
+import numpy as np
 from PIL import Image, ImageOps
 from flask import Flask, render_template, request, jsonify
-from ultralytics import YOLO
+import onnxruntime as ort
 
 try:
     import cv2
@@ -18,27 +19,48 @@ UPLOAD_FOLDER = os.path.join(BASE, 'static', 'uploads')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Usa tu modelo entrenado si existe (python entrenar.py lo crea); si no, el genérico
-RUTA_MODELO = os.path.join(BASE, 'modelos', 'best.pt')
-if os.path.exists(RUTA_MODELO):
-    model = YOLO(RUTA_MODELO)
-else:
-    print("AVISO: no hay modelos/best.pt, usando yolov8n.pt (genérico). Ejecuta entrenar.py.")
-    model = YOLO(os.path.join(BASE, 'yolov8n.pt'))
+# Modelo ONNX (ligero, sin torch)
+MODEL_PATH = os.path.join(BASE, 'modelos', 'best.onnx')
+session = ort.InferenceSession(MODEL_PATH, providers=['CPUExecutionProvider'])
+input_name = session.get_inputs()[0].name
+output_name = session.get_outputs()[0].name
+IMG_SIZE = 224
 
-
+# Clases en el mismo orden que catalogo.json -> productos
 def cargar_catalogo():
     with open(os.path.join(BASE, 'catalogo.json'), encoding='utf-8') as f:
         return json.load(f)
 
-
 CATALOGO = cargar_catalogo()
+CLASES = list(CATALOGO['productos'].keys())
 
-# (Embeddings deshabilitados para reducir memoria en Render)
+MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
+STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+
+
+def preprocess(img):
+    img = img.convert('RGB')
+    img = ImageOps.exif_transpose(img)
+    # center crop to square
+    w, h = img.size
+    s = min(w, h)
+    left = (w - s) // 2
+    top = (h - s) // 2
+    img = img.crop((left, top, left + s, top + s))
+    img = img.resize((IMG_SIZE, IMG_SIZE))
+    arr = np.asarray(img, dtype=np.float32) / 255.0
+    arr = (arr - MEAN) / STD
+    arr = arr.transpose(2, 0, 1)  # CHW
+    arr = np.expand_dims(arr, 0)  # NCHW
+    return arr.astype(np.float32)
+
+
+def softmax(x):
+    e = np.exp(x - np.max(x))
+    return e / e.sum()
 
 
 def construir_texto_voz(info, confianza):
-    """Elige la plantilla de voz según la confianza y rellena los datos del producto."""
     voz = CATALOGO['voz']
     if info is None:
         nivel = 'ninguno'
@@ -62,7 +84,7 @@ def index():
 
 @app.route('/health')
 def health():
-    return jsonify({'status': 'ok', 'model': 'loaded'})
+    return jsonify({'status': 'ok'})
 
 
 @app.route('/predict', methods=['POST'])
@@ -73,92 +95,88 @@ def predict():
     if file.filename == '':
         return jsonify({'error': 'Archivo vacío'}), 400
 
-    # Se convierte cualquier formato (webp, avif, png...) a un JPEG real antes de analizarlo
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'captura.jpg')
     try:
         img = Image.open(file.stream)
-        img = ImageOps.exif_transpose(img).convert('RGB')
-        # Redimensionar para reducir memoria en Render
-        img.thumbnail((640, 640))
-        img.save(file_path, 'JPEG', quality=85)
+        img = img.convert('RGB')
+        img.save(file_path, 'JPEG', quality=92)
     except Exception as e:
         return jsonify({'error': f'No se pudo leer la imagen: {e}'}), 400
 
-    import torch
-    with torch.inference_mode():
-        results = model(file_path)
+    try:
+        pil_img = Image.open(file_path)
+        arr = preprocess(pil_img)
+        out = session.run([output_name], {input_name: arr})[0][0]
+        probs = softmax(out)
+        # top-5
+        top5_idx = np.argsort(probs)[::-1][:5]
+        detecciones = []
+        for idx in top5_idx:
+            clase = CLASES[int(idx)]
+            confianza = float(probs[int(idx)])
+            info = CATALOGO['productos'].get(clase)
+            if clase and info is None:
+                info = {'nombre': clase, 'descripcion': 'Sin descripción.', 'categoria': '', 'precio': 'no disponible'}
+            detecciones.append((clase, confianza, info))
 
-    detecciones = []  # lista de todas las detecciones/clasificaciones
-    if any(r.probs is not None for r in results):  # modelo de CLASIFICACIÓN (yolov8-cls)
-        for r in results:
-            if r.probs is None:
-                continue
-            # top-5 para mostrar alternativas y evitar falsos positivos
-            for idx, conf in zip(r.probs.top5, r.probs.top5conf):
-                clase = model.names[int(idx)]
-                confianza = float(conf)
-                info = CATALOGO['productos'].get(clase)
-                if clase and info is None:
-                    info = {'nombre': clase, 'descripcion': 'Aún no hay una descripción registrada para este producto.',
-                            'categoria': '', 'precio': 'no disponible'}
-                detecciones.append((clase, confianza, info))
-            break  # solo el primer resultado
-    elif any(r.boxes is not None for r in results):  # modelo de DETECCIÓN
-        for r in results:
-            if r.boxes is None:
-                continue
-            for box in r.boxes:
-                clase = model.names[int(box.cls[0])]
-                confianza = float(box.conf[0])
-                info = CATALOGO['productos'].get(clase)
-                if clase and info is None:
-                    info = {'nombre': clase, 'descripcion': 'Aún no hay una descripción registrada para este producto.',
-                            'categoria': '', 'precio': 'no disponible'}
-                detecciones.append((clase, confianza, info))
+        detecciones.sort(key=lambda x: x[1], reverse=True)
+        clase, confianza, info = detecciones[0] if detecciones else (None, 0.0, None)
 
-    # Ordenar por confianza descendente y quedarse con la mejor como resultado principal
-    detecciones.sort(key=lambda x: x[1], reverse=True)
-    clase, confianza, info = detecciones[0] if detecciones else (None, 0.0, None)
+        UMBRAL_CONFIANZA = 0.35
+        if confianza < UMBRAL_CONFIANZA:
+            producto_principal = 'No se pudo identificar con seguridad'
 
-    # Umbral de confianza: evita mostrar un producto erróneo cuando el modelo duda
-    UMBRAL_CONFIANZA = 0.50
-    if confianza < UMBRAL_CONFIANZA:
-        clase = None
-        info = None
-        producto_principal = 'No se pudo identificar con seguridad'
+            # Fallback ORB para aguacate (si OpenCV está disponible)
+            if CV2_AVAILABLE:
+                ref_path = os.path.join(BASE, 'static', 'referencias', 'aguacate.jpg')
+                if os.path.exists(ref_path):
+                    try:
+                        ref = cv2.imread(ref_path, cv2.IMREAD_GRAYSCALE)
+                        upl = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
+                        orb = cv2.ORB_create(1000)
+                        kp1, des1 = orb.detectAndCompute(ref, None)
+                        kp2, des2 = orb.detectAndCompute(upl, None)
+                        if des1 is not None and des2 is not None:
+                            bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
+                            matches = bf.match(des1, des2)
+                            good = [m for m in matches if m.distance < 50]
+                            if len(good) > 100:
+                                info = CATALOGO['productos'].get('Avocado')
+                                confianza = 0.90
+                                producto_principal = (info['nombre'] if info else 'AGUACATE').upper()
+                    except Exception:
+                        pass
+        else:
+            producto_principal = (info['nombre'] if info else 'Ninguno detectado').upper()
 
-        # (Fallback de embeddings deshabilitado para reducir memoria en Render)
-    else:
-        producto_principal = (info['nombre'] if info else 'Ninguno detectado').upper()
+        v = CATALOGO['voz']
+        det_list = []
+        for c, conf, inf in detecciones:
+            det_list.append({
+                'producto': (inf['nombre'] if inf else c).upper(),
+                'clase': c,
+                'confianza': f"{conf * 100:.2f}%",
+                'confianza_raw': conf,
+                'categoria': inf.get('categoria', '') if inf else '',
+                'descripcion': inf['descripcion'] if inf else '',
+                'texto_voz': construir_texto_voz(inf, conf),
+            })
 
-    v = CATALOGO['voz']
-    det_list = []
-    for c, conf, inf in detecciones:
-        det_list.append({
-            'producto': (inf['nombre'] if inf else c).upper(),
-            'clase': c,
-            'confianza': f"{conf * 100:.2f}%",
-            'confianza_raw': conf,
-            'categoria': inf.get('categoria', '') if inf else '',
-            'descripcion': inf['descripcion'] if inf else '',
-            'texto_voz': construir_texto_voz(inf, conf),
+        return jsonify({
+            'producto': producto_principal,
+            'confianza': f"{confianza * 100:.2f}%",
+            'categoria': info.get('categoria', '') if info else '',
+            'descripcion': info['descripcion'] if info else ('Intenta con una foto más cercana y bien iluminada.' if confianza < UMBRAL_CONFIANZA else ''),
+            'texto_voz': construir_texto_voz(info, confianza) if info else '',
+            'voz': {'idioma': v['idioma'], 'velocidad': v['velocidad'],
+                    'tono': v['tono'], 'volumen': v['volumen']},
+            'detecciones': det_list,
+            'total_detecciones': len(det_list),
+            'alternativas': [d['producto'] for d in det_list[1:4]],
         })
-
-    return jsonify({
-        'producto': producto_principal,
-        'confianza': f"{confianza * 100:.2f}%",
-        'categoria': info.get('categoria', '') if info else '',
-        'descripcion': info['descripcion'] if info else ('Intenta con una foto más cercana y bien iluminada.' if confianza < UMBRAL_CONFIANZA else ''),
-        'texto_voz': construir_texto_voz(info, confianza) if info else '',
-        'voz': {'idioma': v['idioma'], 'velocidad': v['velocidad'],
-                'tono': v['tono'], 'volumen': v['volumen']},
-        'detecciones': det_list,
-        'total_detecciones': len(det_list),
-        'alternativas': [d['producto'] for d in det_list[1:4]],
-    })
+    except Exception as e:
+        return jsonify({'error': f'Error al procesar: {e}'}), 500
 
 
 if __name__ == '__main__':
-    # host 0.0.0.0 permite abrirlo desde el celular en la misma red WiFi.
-    # debug=False: con debug activo cualquiera en la red podría ejecutar código en tu PC.
     app.run(host='0.0.0.0', port=5000, debug=False)
