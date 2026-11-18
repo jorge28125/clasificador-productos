@@ -41,13 +41,18 @@ STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 def preprocess(img):
     img = img.convert('RGB')
     img = ImageOps.exif_transpose(img)
-    # center crop to square
+    # Resize shortest edge to 224, then center crop 224x224 (match ultralytics)
     w, h = img.size
-    s = min(w, h)
-    left = (w - s) // 2
-    top = (h - s) // 2
-    img = img.crop((left, top, left + s, top + s))
-    img = img.resize((IMG_SIZE, IMG_SIZE))
+    if w < h:
+        new_w = IMG_SIZE
+        new_h = int(h * IMG_SIZE / w)
+    else:
+        new_h = IMG_SIZE
+        new_w = int(w * IMG_SIZE / h)
+    img = img.resize((new_w, new_h), Image.BILINEAR)
+    left = (new_w - IMG_SIZE) // 2
+    top = (new_h - IMG_SIZE) // 2
+    img = img.crop((left, top, left + IMG_SIZE, top + IMG_SIZE))
     arr = np.asarray(img, dtype=np.float32) / 255.0
     arr = (arr - MEAN) / STD
     arr = arr.transpose(2, 0, 1)  # CHW
